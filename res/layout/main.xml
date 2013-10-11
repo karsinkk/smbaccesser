@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dp"
+	    android:orientation="vertical"
+	    android:layout_weight="1">
+    <EditText
+            android:id="@+id/ip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:singleLine="true"
+            android:hint="@string/serverip" />
+    
+    <EditText 
+	        android:id="@+id/username"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="text"
+	        android:hint="@string/username"
+	        android:singleLine="true"
+        />
+    
+     <EditText
+            android:id="@+id/pw"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:singleLine="true"
+            android:hint="@string/password" />
+    
+    
+    <Button 
+	        android:id="@+id/add"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/browser"
+        
+        />
+     </LinearLayout>
+     <LinearLayout android:id="@+id/adLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="bottom"
+	    android:gravity="center_horizontal">
+	    </LinearLayout>
+    
+
+</LinearLayout>
