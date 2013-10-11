@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">hello</string>
+    <string name="app_name">SmbAccesser</string>
+    <string name="defaultip">10.37.116.92/galois/sqa/share/A3CE_share/APK/Third party/Video</string>
+    <string name="defaultname">pub</string>
+    <string name="defaultpw">1234</string>
+    <string name="browser">browser</string>
+    <string name="installtip">install App by default path</string>
+    <string name="unkonw">unknow</string>
+    <string name="serverip">Server IP</string>
+    <string name="username">User Name</string>
+    <string name="password">Password</string>
+    <string name="editmode">Edit Mode</string>
+    <string name="install">Install</string>
+    <string name="command">command</string>
+    <string name="logcat">Logcat</string>
+    <string name="go">Go</string>
+    <string name="exit">Exit</string>
+    <string name="copy">Copy To</string>
+    <string name="noselected">There is no selected item!</string>
+</resources>
