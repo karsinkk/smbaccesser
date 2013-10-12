@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import net.youmi.android.banner.AdSize;
 import net.youmi.android.banner.AdView;
@@ -73,8 +72,6 @@ public class CmdActivity extends Activity{
         String action = cmdInput.getEditableText().toString();
         if(action == null || action.equals(""))
         {
-            Toast.makeText(CmdActivity.this, "please input command!",
-                    Toast.LENGTH_SHORT).show();
             return;
         }
 

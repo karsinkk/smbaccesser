@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.eb.client.LogcatService;
 
@@ -69,9 +68,6 @@ public class LogcatUtil {
             // cast its IBinder to a concrete class and directly access it.
             mBoundService = ((LogcatService.LocalBinder)service).getService();
             mIsBound = true;
-            // Tell the user about this for our demo.
-            Toast.makeText(mContext, "Logcat service is started!",
-                    Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -82,8 +78,6 @@ public class LogcatUtil {
             // see this happen.
             mBoundService = null;
             mIsBound = false;
-            Toast.makeText(mContext, "Logcat service is stoped!",
-                    Toast.LENGTH_SHORT).show();
         }
     };
 
