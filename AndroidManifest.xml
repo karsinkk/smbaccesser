@@ -4,7 +4,7 @@
     android:versionCode="2"
     android:versionName="2.0">
 
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="13" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/> 
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
@@ -36,7 +36,7 @@
           android:name="com.eb.client.CmdActivity"
           android:label="@string/command">
             <intent-filter>
-                <action android:name="com.marvell.cmd" />
+                <action android:name="com.eb.cmd" />
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
