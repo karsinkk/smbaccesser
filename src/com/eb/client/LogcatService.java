@@ -11,8 +11,6 @@ import com.eb.client.util.LogcatDumper;
 
 public class LogcatService extends Service{
 
-    public final static String ACTION_START = "com.marvell.logcat.start";
-    public final static String ACTION_STOP = "com.marvell.logcat.stop";
     private final IBinder mBinder = new LocalBinder();
     BroadcastReceiver  mActionReceiver  = new BroadcastReceiver()
     {
@@ -21,11 +19,11 @@ public class LogcatService extends Service{
         public void onReceive(Context cts, Intent intent) {
 
             String action = intent.getAction();
-            if(ACTION_START.equals(action))
+            if(Constants.ACTION_START.equals(action))
             {
                 startLogcatDump();
             }
-            else if(ACTION_STOP.equals(action))
+            else if(Constants.ACTION_STOP.equals(action))
             {
                 stopLogcatDump();
             }
