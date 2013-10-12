@@ -2,6 +2,8 @@ package com.eb.client.util;
 
 import android.util.Log;
 
+import com.eb.client.Constants;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +17,7 @@ import java.util.List;
 
 public class LogcatDumper {
 
-    public final static String LOGCATPATH = "/mnt/sdcard/Download/Logcat";
+
     public final static String TAG = "LogcatDumper";
     private static LogcatDumper mInstance;
     LogDumper mTask;
@@ -31,7 +33,7 @@ public class LogcatDumper {
     public void start() {
         Log.d(TAG, "------start:  mTask:"+mTask);
         if(mTask==null){
-            mTask = new LogDumper(String.valueOf(android.os.Process.myPid()),LOGCATPATH);
+            mTask = new LogDumper(String.valueOf(android.os.Process.myPid()),Constants.LOGCATPATH);
             mTask.start();
         }
 
