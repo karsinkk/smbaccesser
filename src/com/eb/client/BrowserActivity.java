@@ -763,6 +763,36 @@ implements OnItemClickListener,OnItemLongClickListener{
             }
             return list;
         }
+        private int getFileIcon(String path)
+        {
+
+            if(path.endsWith(".APK")||path.endsWith(".apk"))
+            {
+                return R.drawable.ic_launcher;
+            }
+
+            //check video format
+            for(int i=0;i<Constants.VIDEO.length;i++) {
+                if(path.indexOf(Constants.VIDEO[i]) > 0) {
+                    return R.drawable.video;
+                }
+            }
+
+            for(int i=0;i<Constants.AUDIO.length;i++) {
+                if(path.indexOf(Constants.AUDIO[i]) > 0) {
+                    return R.drawable.music;
+                }
+            }
+
+            for(int i=0;i<Constants.IMAGE.length;i++) {
+                if(path.indexOf(Constants.IMAGE[i]) > 0) {
+                    return R.drawable.pic;
+                }
+            }
+
+
+            return R.drawable.file;
+        }
         @Override
         public View getView(int arg0, View convertView, ViewGroup arg2) {
             // TODO Auto-generated method stub
@@ -771,6 +801,8 @@ implements OnItemClickListener,OnItemLongClickListener{
             {
                 LayoutInflater inflater = LayoutInflater.from(BrowserActivity.this);
                 convertView = inflater.inflate(R.layout.fileinfo, null);
+                android.widget.AbsListView.LayoutParams params = new android.widget.AbsListView.LayoutParams(android.widget.AbsListView.LayoutParams.MATCH_PARENT, 80);
+                convertView.setLayoutParams(params);
                 holder = new ViewHolder();
                 holder.image = (ImageView)convertView.findViewById(R.id.icon);
                 holder.text  = (TextView)convertView.findViewById(R.id.name);
@@ -782,15 +814,9 @@ implements OnItemClickListener,OnItemLongClickListener{
                 holder  = (ViewHolder)convertView.getTag();
             }
             if(!files.get(arg0).isFile())
-                holder.image.setImageResource(R.drawable.ic_menu_archive);
+                holder.image.setImageResource(R.drawable.folder);
             else
-            {
-                if(files.get(arg0).getName().endsWith(".APK")
-                        ||files.get(arg0).getName().endsWith(".apk"))
-                    holder.image.setImageResource(R.drawable.ic_launcher);
-                else
-                    holder.image.setImageResource(R.drawable.ic_menu_block);
-            }
+                holder.image.setImageResource(getFileIcon(files.get(arg0).getName()));
 
             holder.text.setText(files.get(arg0).getName());
             if(isEditMode)
