@@ -518,7 +518,7 @@ implements OnItemClickListener,OnItemLongClickListener{
             {
                 if(isInstallTask && (selectedFiles.get(i).isFile() &&
                         ( !selectedFiles.get(i).getPath().endsWith(".apk")
-                                || !selectedFiles.get(i).getPath().endsWith(".APK"))))
+                                && !selectedFiles.get(i).getPath().endsWith(".APK"))))
                 {
                     continue;
                 }
