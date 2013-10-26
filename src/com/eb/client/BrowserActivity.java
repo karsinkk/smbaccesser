@@ -126,7 +126,7 @@ implements OnItemClickListener,OnItemLongClickListener{
     private void install(ArrayList<FileItem> files)
     {
         mCopyPD = new ProgressDialog(this);
-        mCopyPD.setTitle("MRVLInstaller");
+        mCopyPD.setTitle("SmbAccesser");
         mCopyPD.setMessage("Loading...");
         mCopyPD.setCanceledOnTouchOutside(false);
         mCopyPD.setCancelable(false);
@@ -137,7 +137,7 @@ implements OnItemClickListener,OnItemLongClickListener{
     private void copyFromRemote(ArrayList<FileItem> files)
     {
         mCopyPD = new ProgressDialog(this);
-        mCopyPD.setTitle("MRVLInstaller-Copy");
+        mCopyPD.setTitle("SmbAccesser-Copy");
         mCopyPD.setMessage("Loading...");
         mCopyPD.setCanceledOnTouchOutside(false);
         mCopyPD.setCancelable(false);
@@ -147,7 +147,7 @@ implements OnItemClickListener,OnItemLongClickListener{
     private void install(final FileItem fi)
     {
         mCopyPD = new ProgressDialog(this);
-        mCopyPD.setTitle("MRVLInstaller");
+        mCopyPD.setTitle("SmbAccesser");
         mCopyPD.setMessage("Loading...");
         mCopyPD.setCanceledOnTouchOutside(false);
         mCopyPD.setCancelable(false);
@@ -156,7 +156,7 @@ implements OnItemClickListener,OnItemLongClickListener{
         {
             AlertDialog.Builder builder = new Builder(this);
             builder.setMessage("install this file/folder(install all APK in this folder)");
-            builder.setTitle("MRVLInstaller");
+            builder.setTitle("SmbAccesser");
             builder.setCancelable(true);
             builder.setPositiveButton("ok", new OnClickListener() {
                 @Override
